@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💯 Unsere Wahre - Frisch geklaut von Frau Warheits Regal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .main-layout {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      flex: 1;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      padding: 1.2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-price {
+      font-size: 1rem;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .image-with-bubble {
+      position: relative;
+      max-width: 260px;
+      flex-shrink: 0;
+      margin-top: 2rem;
+    }
+
+    .image-with-bubble img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .speech-bubble {
+      position: absolute;
+      top: -30px;
+      left: 10px;
+      background: #ffffff;
+      color: #000;
+      padding: 0.9rem 1.3rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      width: fit-content;
+      max-width: 180px;
+    }
+
+    .speech-bubble::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 25px;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-top-color: #fff;
+    }
+
+    .instruction {
+      grid-column: 1 / -1;
+      margin-top: 2rem;
+      font-weight: bold;
+      color: #555;
+      text-align: center;
+    }
+
+    .audio-player {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+
+    iframe {
+      width: 0;
+      height: 0;
+      border: 0;
+    }
+
+    @media (max-width: 768px) {
+      .main-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+      .image-with-bubble {
+        order: 2;
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>💯 Unsere Wahre - Frisch geklaut von Frau Warheits Regal</header>
+
+  <div class="main-layout">
+    <!-- Product Cards -->
+    <div class="products">
+      <div class="product-card"><div class="product-name">Blueberry 20mg</div><div class="product-price">12 Euro</div></div>
+      <div class="product-card"><div class="product-name">Green Apple 20mg</div><div class="product-price">11 Euro</div></div>
+      <div class="product-card"><div class="product-name">Blue Razz Lemonade 20mg</div><div class="product-price">14 Euro</div></div>
+      <div class="product-card"><div class="product-name">Watermelon 20mg</div><div class="product-price">12 Euro</div></div>
+      <div class="product-card"><div class="product-name">Kiwi Passion Fruit Guava 20mg</div><div class="product-price">12 Euro</div></div>
+      <div class="product-card"><div class="product-name">Mint</div><div class="product-price">16 Euro</div></div>
+      <div class="product-card"><div class="product-name">Pineapple Ice</div><div class="product-price">15 Euro</div></div>
+      <div class="product-card"><div class="product-name">Grape</div><div class="product-price">14 Euro</div></div>
+      <div class="product-card"><div class="product-name">Pink Lemonade</div><div class="product-price">17 Euro</div></div>
+      <div class="product-card"><div class="product-name">Raspberry</div><div class="product-price">14 Euro</div></div>
+
+      <!-- Instruction -->
+      <p class="instruction">
+        Das Geld in diese Toilettenpapierhalter reintun mit Bestellung und Geld und Produkt ist dann im Mülleimer bei Waschbecken.
+      </p>
+    </div>
+
+    <!-- Image & Speech Bubble -->
+    <div class="image-with-bubble">
+      <img src="b.jpeg" alt="Shopping Person">
+      <div class="speech-bubble">Hier kauf ich immer ein</div>
+    </div>
+  </div>
+
+  <!-- Muted Autoplay Music (Starts at 55s) -->
+  <div class="audio-player">
+    <iframe
+      src="https://www.youtube.com/embed/dRaYMOgOoH8?start=55&autoplay=1&mute=1&loop=1&playlist=dRaYMOgOoH8"
+      allow="autoplay"
+    ></iframe>
+  </div>
+
+</body>
+</html>
